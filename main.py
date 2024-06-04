@@ -26,7 +26,8 @@ def fetch_from_openstreetmap(city_name: str):
     return response.json()
 
 
-def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+def calculate_distance(lat1: float, lon1: float, lat2: float,
+                       lon2: float) -> float:
     """
     Calculate the distance between two points in kilometers.
     :param lat1: Latitude of the first point.
