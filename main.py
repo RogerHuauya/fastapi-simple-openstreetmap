@@ -1,8 +1,9 @@
 import requests
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Query, Depends
 from fastapi.responses import JSONResponse
 from geopy.distance import geodesic
+from pydantic import BaseModel, root_validator, ValidationError
 
 app = FastAPI()
 
@@ -51,11 +52,11 @@ async def not_found(request, exc):
 async def get_distance(lat1, lon1, lat2, lon2):
     """
     Calculate the distance between two points.
-    :param lat1:
-    :param lon1:
-    :param lat2:
-    :param lon2:
-    :return:
+    :param lat1: Latitude of the first point.
+    :param lon1: Longitude of the first point.
+    :param lat2: Latitude of the second point.
+    :param lon2: Longitude of the second point.
+    :return: The distance between the two points in kilometers.
     """
     distance = calculate_distance(lat1, lon1, lat2, lon2)
     return {"distance": distance}
@@ -65,8 +66,7 @@ async def get_distance(lat1, lon1, lat2, lon2):
 async def get_coordinates(city_name: str):
     """
     Get the coordinates of a city.
-    :param city_name:
-    :return:
+    :param city_name: The name of the city.
+    :return: The coordinates of the city.
     """
-    coordinates_json = fetch_from_openstreetmap(city_name)
-    return coordinates_json
+    return fetch_from_openstreetmap(city_name)
