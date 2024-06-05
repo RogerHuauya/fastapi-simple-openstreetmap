@@ -25,6 +25,7 @@ This simple FastAPI app is about using Unit Tests to apply the Test Driven Devel
 ## Implementation
 
 ### API Endpoints
+The automated generated API documentation can be accessed at [https://fastapi-simple-openstreet-s5jfgvofsq-ue.a.run.app/docs](https://fastapi-simple-openstreet-s5jfgvofsq-ue.a.run.app/docs).
 #### Get Coordinates
 - **URL:** `/coordinates`
 - **Method:** GET

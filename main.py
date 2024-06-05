@@ -1,9 +1,8 @@
 import requests
 
-from fastapi import FastAPI, HTTPException, Query, Depends
+from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from geopy.distance import geodesic
-from pydantic import BaseModel, root_validator, ValidationError
 
 app = FastAPI()
 
