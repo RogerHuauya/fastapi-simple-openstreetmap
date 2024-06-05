@@ -68,18 +68,25 @@ The automated generated API documentation can be accessed at [https://fastapi-si
 ```plaintext
 * @rogerhuauya
 ```
-
-### Documentation
-Use docstrings for function documentation, enabling automatic documentation generation tools like Sphinx or MkDocs.
+## Evidences
+### Unit Tests
+```sh
+pytest
+```
+![]()
 
 ### Code Coverage
-Ensure code coverage is at least 98% by using tools like `coverage.py`. Add tests as necessary to achieve this goal.
+```sh
+pytest --cov=app --cov-report=term-missing
+```
+![]()
 
-### Stress Testing
-Perform stress tests using tools like `locust.io` or `Apache JMeter`. Measure availability, latency, and redundancy.
 
-### Maintainability
-Use consistent naming conventions, proper indentation, and detailed comments. Each function should be short and have a single responsibility.
+### Stress Tests
+```sh
+locust -f locustfile.py
+```
+
 
 ## Conclusion
 This project demonstrates the application of TDD in developing a robust API with thorough unit tests, high code coverage, and proper deployment using Docker and Google Cloud Run. The inclusion of a CODEOWNERS file ensures code ownership and maintainability. ✅
