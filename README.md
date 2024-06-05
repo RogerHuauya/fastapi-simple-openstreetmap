@@ -69,23 +69,20 @@ The automated generated API documentation can be accessed at [https://fastapi-si
 * @rogerhuauya
 ```
 ## Evidences
-### Unit Tests
+### Unit Tests and Code Coverage
 ```sh
-pytest
+pytest --cov=main --cov-report=term-missing
 ```
-![]()
-
-### Code Coverage
-```sh
-pytest --cov=app --cov-report=term-missing
-```
-![]()
+![images/test.png](images/test.png)
 
 
 ### Stress Tests
 ```sh
 locust -f locustfile.py
 ```
+![images/locust.png](images/locust.png)
+Cloud run metrics:
+![images/cloudrun.png](images/cloudrun.png)
 
 
 ## Conclusion
