@@ -4,7 +4,8 @@
 This simple FastAPI app is about using Unit Tests to apply the Test Driven Development (TDD) methodology to implement an API. The API exposes two endpoints:
 1. `/coordinates`: Receives a city name and returns the latitude and longitude of the specified city or an error.
 2. `/distance`: Receives two coordinates and returns the distance between them or an error.
-
+## Public Repository
+- **GitHub URL:** [https://github.com/RogerHuauya/fastapi-simple-openstreetmap](https://github.com/RogerHuauya/fastapi-simple-openstreetmap)
 ## Task Outline
 1. Design the solution. ✅
 2. Write unit tests to check structural aspects of the API. ✅
