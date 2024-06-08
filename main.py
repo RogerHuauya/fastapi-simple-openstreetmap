@@ -18,16 +18,15 @@ def fetch_from_openstreetmap(city_name: str):
     url = f"{OPENSTREETMAP_URL}?q={city_name}&format=json"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                      "AppleWebKit/537.36 (KHTML, like Gecko) "
-                      "Chrome/58.0.3029.110 Safari/537.3"
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/58.0.3029.110 Safari/537.3"
     }
     response = requests.get(url, headers=headers)
     response.raise_for_status()
     return response.json()
 
 
-def calculate_distance(lat1: float, lon1: float, lat2: float,
-                       lon2: float) -> float:
+def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """
     Calculate the distance between two points in kilometers.
     :param lat1: Latitude of the first point.

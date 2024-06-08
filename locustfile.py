@@ -11,4 +11,5 @@ class WebsiteTestUser(HttpUser):
     @task
     def get_distance(self):
         self.client.get(
-            "/distance/?lat1=51.5074&lon1=-0.1278&lat2=48.8566&lon2=2.3522")
+            "/distance/?lat1=51.5074&lon1=" "-0.1278&lat2=48.8566&lon2=2.3522"
+        )
