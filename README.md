@@ -85,6 +85,8 @@ locust -f locustfile.py
 Cloud run metrics:
 ![images/cloudrun.png](images/cloudrun.png)
 
-
+### Branch Protection and CI
+Github actions setup for black and pytest. Branch protection enabled for main branch:
+![images/github-actions.png](images/github-actions.png)
 ## Conclusion
 This project demonstrates the application of TDD in developing a robust API with thorough unit tests, high code coverage, and proper deployment using Docker and Google Cloud Run. The inclusion of a CODEOWNERS file ensures code ownership and maintainability. ✅
